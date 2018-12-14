@@ -1,0 +1,11 @@
+<html>
+{% if grains['fqdn'] == 'saltminion01' %}
+<body bgcolor="#FFFF00">
+{% elif grains['fqdn'] == 'saltminion02' %}
+<body bgcolor="#00FF00">
+{% endif %}
+{% for i in [1,2,3] %}
+<h1><center>{{ pillar['devpillar'] }}</h1></center>
+{% endfor %}
+</body>
+</html>
